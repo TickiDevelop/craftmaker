@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.tickidev.tickidev.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "soupstacking.refmap.json",
+  "mixins": [
+    "ItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
