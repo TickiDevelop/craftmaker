@@ -1,63 +1,62 @@
-# Soup Stacking Mod
+# ✨ CraftMaker
 
-Мод для Minecraft 1.21.11 (NeoForge), который позволяет всем предметам со словом "Суп" в названии стакаться до 16 штук вместо стандартного 1.
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-brightgreen)
+![NeoForge](https://img.shields.io/badge/NeoForge-21.1.42-blue)
+![Java](https://img.shields.io/badge/Java-21-orange)
 
-## Описание
+A powerful Minecraft 1.21.11 mod on NeoForge that allows server administrators to create custom crafting recipes directly in-game through an intuitive graphical interface.
 
-Этот мод автоматически изменяет максимальный размер стака для всех предметов, в названии которых содержится слово "суп" на любом языке:
-- **English**: soup
-- **Русский**: суп
-- **Deutsch**: suppe
-- **Français**: soupe
-- **Español**: sopa
-- **Italiano**: zuppa
+## 🎯 Features
 
-## Особенности
+- **In-game Recipe Editor** - Create shaped 3x3 crafting recipes with drag-and-drop
+- **Recipe Priority System** - CraftMaker recipes override vanilla recipes
+- **Smart Recipe Management** - View, search, and delete recipes with fuzzy matching
+- **Network Synchronization** - Automatic client-server recipe sync
+- **Intuitive Controls** - Left-click for full stack, right-click for single item
 
-- ✅ Работает со всеми супами из ванильного Minecraft
-- ✅ Совместим с модами, добавляющими новые супы
-- ✅ Автоматически определяет супы по названию
-- ✅ Поддержка множества языков
-- ✅ Использует Mixin для надежной работы
+## 📖 Usage
 
-## Установка
+### Commands
 
-1. Установите [NeoForge](https://neoforged.net/) версии 21.11.42 или выше для Minecraft 1.21.11
-2. Скачайте файл мода `soupstacking-1.0.0.jar` из папки `build/libs/`
-3. Поместите файл в папку `mods` вашей установки Minecraft
-4. Запустите игру!
+- `/cm` or `/craftmaker` - Opens the main menu
+- `/cm reload` - Reloads all recipes from the server
 
-## Сборка из исходников
+### Creating a Recipe
 
-```bash
-./gradlew build
-```
+1. Open the menu with `/cm`
+2. Click "Add Recipe"
+3. Fill the 3x3 ingredient grid with items
+4. Set the result item and count
+5. Enter a recipe name (auto-generated if empty)
+6. Click "Save"
 
-Собранный мод будет находиться в `build/libs/soupstacking-1.0.0.jar`
+### Managing Recipes
 
-## Технические детали
+1. Open the menu with `/cm`
+2. Click "Recipe List"
+3. Search recipes using the search bar
+4. Click "✕" to delete a recipe
 
-Мод использует Mixin для перехвата метода `getMaxStackSize()` класса `ItemStack` и изменяет возвращаемое значение на 16 для всех предметов, содержащих слово "суп" в названии.
+## 🛠️ Installation
 
-**Важно:** Мод перехватывает метод в классе `ItemStack`, а не `Item`, что позволяет динамически изменять размер стака в зависимости от названия предмета.
+### Requirements
+- Minecraft 1.21.11
+- NeoForge 21.1.42
+- Java 21
 
-## Совместимость
+### Setup
+1. Download the latest version
+2. Place the JAR file in the server's `mods/` folder
+3. Start the server
+4. Use `/cm` to open the menu
 
-- **Minecraft**: 1.21.11
-- **NeoForge**: 21.11.42+
-- **Java**: 21
+## ⚙️ Configuration
 
-## Лицензия
+Edit `config/craftmaker-common.toml` to mod settings:
+- `showWelcomeMessage` - Show version message on join (default: true)
 
-MIT License - см. файл [LICENSE](LICENSE)
+## � Support
 
-## Автор
-
-TickiDevelop (FreshMeat Studio)
+[GitHub Repository](https://github.com/TickiDevelop/craftmaker)
 
 ---
-
-## Additional Resources
-
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
